@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="369.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane prefHeight="375.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Accueil">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="500.0">
+                     <children>
+                        <Button fx:id="btnquitter" layoutX="385.0" layoutY="201.0" mnemonicParsing="false" onAction="#fermer" text="Quitter" />
+                        <Label layoutX="42.0" prefHeight="71.0" prefWidth="413.0" text="Bienvenue à mon convertisseur d'unité" textFill="#ff0808" underline="true">
+                           <font>
+                              <Font name="Times New Roman Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="48.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ce programme vous permettra de convertir des unités du système impérial, du système métrique ainsi que du système coutumier des États-Unis. Trois groupes d’unités sont offerts pour être convertis; les longueurs, les masses et les volumes." wrappingWidth="337.21630859375">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Text>
+                        <Label layoutX="169.0" layoutY="194.0" prefHeight="41.0" prefWidth="216.0" text="Merci d’avoir utilisé mon programme!" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Longeurs">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtlong1" layoutX="71.0" layoutY="104.0" onKeyReleased="#calculer1" promptText="Entrez un nombre" />
+                        <TextField fx:id="txtlong2" layoutX="257.0" layoutY="104.0" onKeyReleased="#calculer2" prefHeight="27.0" prefWidth="168.0" promptText="Entrez un nombre" />
+                        <ComboBox fx:id="cbolong1" layoutX="71.0" layoutY="144.0" onAction="#calculer1" prefHeight="27.0" prefWidth="161.0" promptText="Choisissez une unité" />
+                        <ComboBox fx:id="cbolong2" layoutX="259.0" layoutY="144.0" onAction="#calculer2" prefHeight="27.0" prefWidth="163.0" promptText="Choisissez une unité" />
+                        <Label layoutX="143.0" layoutY="46.0" text="Convertir des longeurs" textAlignment="CENTER" textFill="RED" underline="true">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Masses">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cbomasse1" layoutX="73.0" layoutY="144.0" onAction="#calculer3" prefHeight="27.0" prefWidth="163.0" promptText="Choisissez une unité" />
+                        <ComboBox fx:id="cbomasse2" layoutX="259.0" layoutY="144.0" onAction="#calculer4" prefHeight="27.0" prefWidth="159.0" promptText="Choisissez une unité" />
+                        <TextField fx:id="txtmasse1" layoutX="74.0" layoutY="105.0" onKeyReleased="#calculer3" promptText="Entrez  un nombre" />
+                        <TextField fx:id="txtmasse2" layoutX="258.0" layoutY="105.0" onKeyReleased="#calculer4" promptText="Entrez un nombre" />
+                        <Label layoutX="155.0" layoutY="42.0" text="Convertir des masses" textFill="RED" underline="true">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Volumes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="222.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cbovol1" layoutX="71.0" layoutY="144.0" onAction="#calculer5" prefHeight="27.0" prefWidth="162.0" promptText="Choisissez une unité" />
+                        <ComboBox fx:id="cbovol2" layoutX="259.0" layoutY="144.0" onAction="#calculer6" prefHeight="27.0" prefWidth="161.0" promptText="Choisissez une unité" />
+                        <TextField fx:id="txtvol1" layoutX="72.0" layoutY="101.0" onKeyReleased="#calculer5" prefHeight="27.0" prefWidth="161.0" promptText="Entrez un nombre" />
+                        <TextField fx:id="txtvol2" layoutX="259.0" layoutY="101.0" onKeyReleased="#calculer6" prefHeight="27.0" prefWidth="161.0" promptText="Entrez un nombre" />
+                        <Label layoutX="152.0" layoutY="40.0" text="Convertir des volumes" textFill="RED" underline="true">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
